@@ -133,9 +133,13 @@ table {
 body {
   padding: 52px;
   font-family: "Rubik", sans-serif;
+  background: linear-gradient(180deg, rgba(0, 179, 236, 0.55) 0%, #1a9ec8 58.56%);
+  background-attachment: fixed;
 }
 
 header {
   display: flex;
   justify-content: space-between;
+  font-size: clamp(1.2rem, 2vw, 2rem);
+  color: white;
 }/*# sourceMappingURL=main.css.map */
