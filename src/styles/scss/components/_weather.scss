@@ -1,0 +1,45 @@
+main {
+  @include flex-center;
+  height: 50vh;
+
+  .weather-container {
+    display: flex;
+    flex-direction: column;
+    text-align: center;
+    gap: $s-spacing;
+
+    .weather-desc,
+    .location {
+      font-size: $header-font-size;
+    }
+
+    .weather-desc {
+      margin-bottom: $md-spacing;
+    }
+
+    .weather-temp {
+      font-size: clamp(5rem, 7vw, 8rem);
+    }
+
+    .location-container {
+      @include flex-center;
+      margin-top: $md-spacing;
+      gap: $s-spacing;
+
+      .location {
+        color: rgba(255, 255, 255, 0.61);
+        letter-spacing: 4px;
+      }
+
+      .location-img {
+        width: 70px;
+        border-radius: 20px;
+      }
+    }
+  }
+
+  p {
+    font-weight: 600;
+    color: $main-font-colour;
+  }
+}

@@ -142,4 +142,46 @@ header {
   justify-content: space-between;
   font-size: clamp(1.2rem, 2vw, 2rem);
   color: white;
+}
+
+main {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  height: 50vh;
+}
+main .weather-container {
+  display: flex;
+  flex-direction: column;
+  text-align: center;
+  gap: 12px;
+}
+main .weather-container .weather-desc,
+main .weather-container .location {
+  font-size: clamp(1.2rem, 2vw, 2rem);
+}
+main .weather-container .weather-desc {
+  margin-bottom: 20px;
+}
+main .weather-container .weather-temp {
+  font-size: clamp(5rem, 7vw, 8rem);
+}
+main .weather-container .location-container {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  margin-top: 20px;
+  gap: 12px;
+}
+main .weather-container .location-container .location {
+  color: rgba(255, 255, 255, 0.61);
+  letter-spacing: 4px;
+}
+main .weather-container .location-container .location-img {
+  width: 70px;
+  border-radius: 20px;
+}
+main p {
+  font-weight: 600;
+  color: white;
 }/*# sourceMappingURL=main.css.map */
