@@ -155,6 +155,12 @@ main .weather-container {
   flex-direction: column;
   text-align: center;
   gap: 12px;
+  margin-top: 52px;
+}
+main .weather-container .weather-icon {
+  width: 100px;
+  margin-left: auto;
+  margin-right: auto;
 }
 main .weather-container .weather-desc,
 main .weather-container .location {
@@ -162,6 +168,7 @@ main .weather-container .location {
 }
 main .weather-container .weather-desc {
   margin-bottom: 20px;
+  text-transform: capitalize;
 }
 main .weather-container .weather-temp {
   font-size: clamp(5rem, 7vw, 8rem);
@@ -184,4 +191,33 @@ main .weather-container .location-container .location-img {
 main p {
   font-weight: 600;
   color: white;
+}
+main .search-box {
+  border: none;
+  border-radius: 20px;
+  padding: 8px 550px 8px 20px;
+  background: rgba(255, 255, 255, 0.44);
+  font-weight: 600;
+  font-size: 1.25rem;
+  margin-top: 52px;
+  color: #696969;
+}
+main .search-box::-moz-placeholder {
+  color: rgba(0, 0, 0, 0.22);
+  font-weight: 600;
+  font-size: 1.25rem;
+}
+main .search-box:-ms-input-placeholder {
+  color: rgba(0, 0, 0, 0.22);
+  font-weight: 600;
+  font-size: 1.25rem;
+}
+main .search-box::placeholder {
+  color: rgba(0, 0, 0, 0.22);
+  font-weight: 600;
+  font-size: 1.25rem;
+}
+main .search-box:focus {
+  outline: none;
+  background-color: rgba(255, 255, 255, 0.514);
 }/*# sourceMappingURL=main.css.map */

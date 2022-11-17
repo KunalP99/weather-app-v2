@@ -10,12 +10,13 @@ $header-font-size: clamp(1.2rem, 2vw, 2rem);
 $main-font-colour: white;
 $secondary-font-colour: #696969;
 
-// Background Colorus
+// Background Colours
 $day-bg-colour: linear-gradient(
   180deg,
   rgba(0, 179, 236, 0.55) 0%,
   #1a9ec8 58.56%
 );
+$transparent-colour: rgba(255, 255, 255, 0.44);
 
 // Spacing
 $xxs-spacing: 4px;
