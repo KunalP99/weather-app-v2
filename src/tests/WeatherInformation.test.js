@@ -5,7 +5,7 @@ import WeatherInformation from "../components/WeatherInformation";
 
 afterEach(cleanup);
 
-describe("WeatherInformation", () => {
+describe("WeatherInformation Component", () => {
   it("should render search box", async () => {
     render(<WeatherInformation />);
     const searchBox = screen.getByPlaceholderText("Type city name:");
@@ -31,6 +31,5 @@ describe("WeatherInformation", () => {
       expect(axiosMock.get).toHaveBeenCalled();
       expect(queryByTestId(/weather-component/i)).toHaveTextContent("London");
     });
-    screen.debug();
   });
 });

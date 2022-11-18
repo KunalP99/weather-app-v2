@@ -2,7 +2,7 @@ const mockResponse = {
   data: {
     name: "London",
     main: {
-      temp: 12,
+      temp: 12.72,
     },
     sys: {
       country: "GB",
