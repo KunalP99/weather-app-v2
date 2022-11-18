@@ -148,6 +148,7 @@ main {
   display: flex;
   justify-content: center;
   align-items: center;
+  flex-direction: column;
   height: 50vh;
 }
 main .weather-container {

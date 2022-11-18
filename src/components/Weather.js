@@ -18,7 +18,6 @@ export default function Weather({ location }) {
     https://flagcdn.com/48x36/${location.sys.country.toLowerCase()}.png 3x`}
         />
       </div>
-      <input className='search-box' type='text' placeholder='Type city name:' />
     </div>
   );
 }
