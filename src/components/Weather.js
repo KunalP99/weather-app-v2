@@ -20,9 +20,9 @@ export default function Weather({ location }) {
         </p>
         <img
           className='location-img'
-          src={`https://flagcdn.com/w80/${location.sys.country.toLowerCase()}.png`}
-          srcSet={`https://flagcdn.com/32x24/${location.sys.country.toLowerCase()}.png 2x,
-    https://flagcdn.com/48x36/${location.sys.country.toLowerCase()}.png 3x`}
+          src={`https://flagcdn.com/48x36/${location.sys.country.toLowerCase()}.png`}
+          srcset={`https://flagcdn.com/96x72/${location.sys.country.toLowerCase()}.png 2x,
+    https://flagcdn.com/144x108/${location.sys.country.toLowerCase()}.png 3x`}
           data-testid='location-flag'
         />
       </div>

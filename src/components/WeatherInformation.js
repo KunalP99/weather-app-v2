@@ -26,15 +26,20 @@ export default function WeatherInformation() {
       });
   };
 
-  // Maybe put cityName inside dependacy array
+  // Every time city is updated, fetchData will run
   useEffect(() => {
     fetchData();
   }, [city]);
 
   const onClickLocation = (e) => {
     e.preventDefault();
+    const form = document.getElementById("form");
+
     let inputVal = document.querySelector(".search-box").value;
     setCity(inputVal);
+
+    // Clears input value
+    form.reset();
   };
 
   return (
@@ -44,7 +49,7 @@ export default function WeatherInformation() {
           <Weather location={location} />
         </div>
       )}
-      <form>
+      <form id='form'>
         <input
           className='search-box'
           type='text'

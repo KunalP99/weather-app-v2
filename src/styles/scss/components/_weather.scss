@@ -34,11 +34,6 @@
       color: rgba(255, 255, 255, 0.61);
       letter-spacing: 4px;
     }
-
-    .location-img {
-      width: 70px;
-      border-radius: 20px;
-    }
   }
 }
 
@@ -48,6 +43,6 @@ p {
 }
 
 .error-code {
-  color: red;
+  color: rgb(159, 2, 2);
   margin-top: $md-spacing;
 }

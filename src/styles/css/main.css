@@ -185,9 +185,21 @@ main form .search-box:focus {
   background-color: rgba(255, 255, 255, 0.514);
 }
 main button {
-  cursor: pointer;
   margin-top: 20px;
-  width: 100px;
+  margin-left: auto;
+  margin-right: auto;
+  background: rgb(207, 223, 228);
+  border-radius: 5px;
+  border: none;
+  padding: 10px 70px;
+  font-size: 1rem;
+  font-weight: 600;
+  cursor: pointer;
+  transition: 300ms ease-in-out;
+}
+main button:hover {
+  background: rgb(181, 195, 200);
+  border-radius: 20px;
 }
 
 .weather-container {
@@ -224,10 +236,6 @@ main button {
   color: rgba(255, 255, 255, 0.61);
   letter-spacing: 4px;
 }
-.weather-container .location-container .location-img {
-  width: 70px;
-  border-radius: 20px;
-}
 
 p {
   font-weight: 600;
@@ -235,6 +243,6 @@ p {
 }
 
 .error-code {
-  color: red;
+  color: rgb(159, 2, 2);
   margin-top: 20px;
 }/*# sourceMappingURL=main.css.map */
