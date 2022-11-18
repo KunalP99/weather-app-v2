@@ -1,5 +1,6 @@
 import { useState, useEffect } from "react";
 import axios from "axios";
+import Search from "../images/search.svg";
 import Weather from "./Weather";
 
 export default function WeatherInformation() {
@@ -50,14 +51,16 @@ export default function WeatherInformation() {
         </div>
       )}
       <form id='form'>
-        <input
-          className='search-box'
-          type='text'
-          placeholder='Type city name:'
-        />
-        <button onClick={onClickLocation} type='submit'>
-          Search
-        </button>
+        <div className='search-box-container'>
+          <input
+            className='search-box'
+            type='text'
+            placeholder='Type city name:'
+          />
+          <button onClick={onClickLocation} type='submit'>
+            <img className="search-img" src={Search} alt='Search button' />
+          </button>
+        </div>
       </form>
 
       {error && (

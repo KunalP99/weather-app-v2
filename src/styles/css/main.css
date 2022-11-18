@@ -153,17 +153,29 @@ main {
 }
 main form {
   display: flex;
+  justify-content: center;
+  align-items: center;
   flex-direction: column;
 }
-main form .search-box {
+main form .search-box-container {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
   border: none;
   border-radius: 20px;
-  padding: 8px 550px 8px 20px;
+  width: 600px;
+  padding: 4px 32px;
   background: rgba(255, 255, 255, 0.44);
-  font-weight: 600;
-  font-size: 1.25rem;
   margin-top: 52px;
   color: #696969;
+}
+main form .search-box {
+  color: white;
+  width: 100%;
+  font-weight: 600;
+  font-size: 1.25rem;
+  background: transparent;
+  border: none;
 }
 main form .search-box::-moz-placeholder {
   color: rgba(0, 0, 0, 0.22);
@@ -182,26 +194,22 @@ main form .search-box::placeholder {
 }
 main form .search-box:focus {
   outline: none;
-  background-color: rgba(255, 255, 255, 0.514);
 }
-main button {
-  margin-top: 20px;
-  margin-left: auto;
-  margin-right: auto;
-  background: rgb(207, 223, 228);
-  border-radius: 5px;
+main form button {
+  display: flex;
+  background-color: transparent;
   border: none;
-  padding: 10px 70px;
-  font-size: 1rem;
-  font-weight: 600;
   cursor: pointer;
-  transition: 300ms ease-in-out;
 }
-main button:hover {
-  background: rgb(181, 195, 200);
-  border-radius: 20px;
+main form button .search-img {
+  width: 30px;
 }
 
+@media (max-width: 663px) {
+  main form .search-box-container {
+    width: 100%;
+  }
+}
 .weather-container {
   display: flex;
   flex-direction: column;
