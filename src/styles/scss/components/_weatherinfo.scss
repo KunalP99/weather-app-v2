@@ -1,0 +1,35 @@
+main {
+  @include flex-center;
+  flex-direction: column;
+  height: 50vh;
+
+  form {
+    display: flex;
+    flex-direction: column;
+
+    .search-box {
+      border: none;
+      border-radius: 20px;
+      padding: $xs-spacing 550px $xs-spacing $md-spacing;
+      background: $transparent-colour;
+      font-weight: 600;
+      font-size: 1.25rem;
+      margin-top: $xl-spacing;
+      color: $secondary-font-colour;
+    }
+    .search-box::placeholder {
+      color: rgba(0, 0, 0, 0.22);
+      font-weight: 600;
+      font-size: 1.25rem;
+    }
+    .search-box:focus {
+      outline: none;
+      background-color: rgba(255, 255, 255, 0.514);
+    }
+  }
+  button {
+    cursor: pointer;
+    margin-top: $md-spacing;
+    width: 100px;
+  }
+}

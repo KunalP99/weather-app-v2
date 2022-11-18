@@ -1,18 +1,21 @@
 import React from "react";
-import { render, screen, cleanup, waitFor } from "@testing-library/react";
+import { render, cleanup, waitFor, fireEvent } from "@testing-library/react";
 import axiosMock from "axios";
 import WeatherInformation from "../components/WeatherInformation";
 
 afterEach(cleanup);
 
 describe("WeatherInformation Component", () => {
-  it("should render search box", async () => {
-    render(<WeatherInformation />);
-    const searchBox = screen.getByPlaceholderText("Type city name:");
+  it("should render search box", () => {
+    const { getByPlaceholderText } = render(<WeatherInformation />);
+    const searchBox = getByPlaceholderText("Type city name:");
+    expect(searchBox).toBeInTheDocument();
+  });
 
-    await waitFor(() => {
-      expect(searchBox).toBeInTheDocument();
-    });
+  it("should render submit button", () => {
+    const { getByRole } = render(<WeatherInformation />);
+    const submitBtn = getByRole("button");
+    expect(submitBtn).toBeInTheDocument();
   });
 
   it("should not be rendered when waiting for data", async () => {
