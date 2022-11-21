@@ -1,0 +1,16 @@
+.more-weather-info-container {
+  display: flex;
+  justify-content: space-between;
+  margin-top: $xl-spacing;
+  padding: $xl-spacing;
+  flex-wrap: wrap;
+
+  .info-container {
+    @include more-info-container;
+
+    p {
+      color: $main-font-style;
+      font-size: 1.5rem;
+    }
+  }
+}

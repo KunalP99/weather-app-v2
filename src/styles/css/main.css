@@ -131,10 +131,14 @@ table {
 }
 
 body {
-  padding: 52px;
   font-family: "Rubik", sans-serif;
   background: linear-gradient(180deg, rgba(0, 179, 236, 0.55) 0%, #1a9ec8 58.56%);
   background-attachment: fixed;
+}
+
+.container {
+  display: flex;
+  flex-direction: column;
 }
 
 header {
@@ -142,15 +146,9 @@ header {
   justify-content: space-between;
   font-size: clamp(1.2rem, 2vw, 2rem);
   color: white;
+  padding: 52px;
 }
 
-main {
-  display: flex;
-  justify-content: center;
-  align-items: center;
-  flex-direction: column;
-  height: 50vh;
-}
 main form {
   display: flex;
   justify-content: center;
@@ -215,7 +213,6 @@ main form button .search-img {
   flex-direction: column;
   text-align: center;
   gap: 12px;
-  margin-top: 52px;
 }
 .weather-container .weather-icon {
   width: 100px;
@@ -253,4 +250,23 @@ p {
 .error-code {
   color: rgb(159, 2, 2);
   margin-top: 20px;
+}
+
+.more-weather-info-container {
+  display: flex;
+  justify-content: space-between;
+  margin-top: 52px;
+  padding: 52px;
+  flex-wrap: wrap;
+}
+.more-weather-info-container .info-container {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  flex-direction: column;
+  gap: 20px;
+}
+.more-weather-info-container .info-container p {
+  color: "Rubik", sans-serif;
+  font-size: 1.5rem;
 }/*# sourceMappingURL=main.css.map */

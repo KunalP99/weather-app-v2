@@ -10,13 +10,13 @@ function App() {
   const morning =
     "linear-gradient(180deg, rgba(0, 179, 236, 0.55) 0%, #1A9EC8 58.56%)";
   const afternoon =
-    "linear-gradient(180deg, rgba(242, 195, 74, 0.55) 0%, #E8AC53 58.56%)";
+    "linear-gradient(180deg, rgba(237, 176, 20, 0.55) 0%, #E8AC53 58.56%)";
   const evening =
     "linear-gradient(180deg, rgba(255, 168, 252, 0.55) 0%, rgba(131, 68, 180, 0.997656) 58.56%)";
   const night =
-    "linear-gradient(180deg, rgba(91, 91, 91, 0.55) 0%, #565656 58.56%)";
+    "linear-gradient(180deg, rgba(10, 41, 109, 0.55) 0%, #374667 58.56%)";
   const midnight =
-    "linear-gradient(180deg, rgba(0, 0, 0, 0.55) 0%, #010101 58.56%)";
+    "linear-gradient(180deg, rgba(42, 49, 64, 0.55) 0%, #484A4E 58.56%)";
   // Use this variable to compare times and change background colour
   const hours = date.getHours();
 
@@ -24,7 +24,7 @@ function App() {
     // Everytime one second passes, we set the date to a new date, updating the DOM
     let timer = setInterval(() => setDate(new Date()), 1000);
 
-    // Changes background colour depending on the time
+    // Changes background colour depending on the time (24 hour clock)
     if (hours >= 0 && hours < 6) {
       document.body.style.background = midnight;
       document.body.style.backgroundAttachment = "fixed";
@@ -45,7 +45,7 @@ function App() {
     return () => {
       clearInterval(timer);
     };
-  }, []);
+  }, [hours]);
 
   return (
     <div className='container'>

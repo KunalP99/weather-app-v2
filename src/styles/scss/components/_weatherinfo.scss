@@ -1,8 +1,4 @@
 main {
-  @include flex-center;
-  flex-direction: column;
-  height: 50vh;
-
   form {
     display: flex;
     justify-content: center;

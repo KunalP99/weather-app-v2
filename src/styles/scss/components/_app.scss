@@ -1,6 +1,10 @@
 body {
-  padding: $xl-spacing;
   font-family: $main-font-style;
   background: $day-bg-colour;
   background-attachment: fixed;
+}
+
+.container {
+  display: flex;
+  flex-direction: column;
 }

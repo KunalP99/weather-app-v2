@@ -42,3 +42,9 @@ $xxl-spacing: 84px;
   display: flex;
   align-items: center;
 }
+
+@mixin more-info-container {
+  @include flex-center;
+  flex-direction: column;
+  gap: $md-spacing;
+}

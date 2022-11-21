@@ -2,6 +2,7 @@ import { useState, useEffect } from "react";
 import axios from "axios";
 import Search from "../images/search.svg";
 import Weather from "./Weather";
+import MoreWeatherInformation from "./MoreWeatherInformation";
 
 export default function WeatherInformation() {
   const [location, setLocation] = useState(null);
@@ -58,14 +59,14 @@ export default function WeatherInformation() {
             placeholder='Type city name:'
           />
           <button onClick={onClickLocation} type='submit'>
-            <img className="search-img" src={Search} alt='Search button' />
+            <img className='search-img' src={Search} alt='Search button' />
           </button>
         </div>
       </form>
-
       {error && (
         <div className='error-code'>{error} - Try type another city name!</div>
       )}
+      <MoreWeatherInformation />
     </main>
   );
 }
