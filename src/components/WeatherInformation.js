@@ -18,7 +18,6 @@ export default function WeatherInformation() {
     await axios
       .get(url)
       .then((res) => {
-        console.log(res);
         setIsLoading(true);
         setLocation(res.data);
         setIsLoading(false);
@@ -29,7 +28,7 @@ export default function WeatherInformation() {
       });
   };
 
-  // Every time city is updated, fetchData will run
+  // Every time city is updated, fetchData will run and in turn, updates everything on the screen
   useEffect(() => {
     fetchData();
   }, [city]);

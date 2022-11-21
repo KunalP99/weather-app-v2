@@ -1,7 +1,12 @@
 header {
   display: flex;
   justify-content: space-between;
+  align-items: center;
   font-size: $header-font-size;
   color: $main-font-colour;
   padding: $xl-spacing;
+
+  .local-time-text {
+    font-size: clamp(0.6rem, 1vw, 1rem);
+  }
 }

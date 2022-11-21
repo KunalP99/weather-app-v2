@@ -1,24 +1,26 @@
 import Header from "./components/Header";
 import { useState, useEffect } from "react";
+import axios from "axios";
 import "./styles/css/main.css";
 import WeatherInformation from "./components/WeatherInformation";
 
 function App() {
   const [date, setDate] = useState(new Date());
+  // Use this variable to compare times and change background colour
+  const hours = date.getHours();
+  const url = `https://restcountries.com/v3.1/alpha/us`;
 
   // Bg Colours
   const morning =
     "linear-gradient(180deg, rgba(0, 179, 236, 0.55) 0%, #1A9EC8 58.56%)";
   const afternoon =
     "linear-gradient(180deg, rgba(237, 176, 20, 0.55) 0%, #E8AC53 58.56%)";
-  const evening =
-    "linear-gradient(180deg, rgba(255, 168, 252, 0.55) 0%, rgba(131, 68, 180, 0.997656) 58.56%)";
+  const evening = 
+    "linear-gradient(180deg, #D989B5 0%, #863A6F 58.56%)";
   const night =
     "linear-gradient(180deg, rgba(10, 41, 109, 0.55) 0%, #374667 58.56%)";
   const midnight =
     "linear-gradient(180deg, rgba(42, 49, 64, 0.55) 0%, #484A4E 58.56%)";
-  // Use this variable to compare times and change background colour
-  const hours = date.getHours();
 
   useEffect(() => {
     // Everytime one second passes, we set the date to a new date, updating the DOM

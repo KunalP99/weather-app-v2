@@ -4,6 +4,7 @@
   margin-top: $xl-spacing;
   padding: $xl-spacing;
   flex-wrap: wrap;
+  gap: 100px;
 
   .info-container {
     @include more-info-container;
@@ -12,5 +13,11 @@
       color: $main-font-style;
       font-size: 1.5rem;
     }
+  }
+}
+
+@media (max-width: 450px) {
+  .more-weather-info-container {
+    justify-content: center;
   }
 }
