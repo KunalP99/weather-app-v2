@@ -10,13 +10,12 @@ function App() {
   const hours = date.getHours();
   const url = `https://restcountries.com/v3.1/alpha/us`;
 
-  // Bg Colours
+  // Bg colours for when time changes
   const morning =
     "linear-gradient(180deg, rgba(0, 179, 236, 0.55) 0%, #1A9EC8 58.56%)";
   const afternoon =
     "linear-gradient(180deg, rgba(237, 176, 20, 0.55) 0%, #E8AC53 58.56%)";
-  const evening = 
-    "linear-gradient(180deg, #D989B5 0%, #863A6F 58.56%)";
+  const evening = "linear-gradient(180deg, #D989B5 0%, #863A6F 58.56%)";
   const night =
     "linear-gradient(180deg, rgba(10, 41, 109, 0.55) 0%, #374667 58.56%)";
   const midnight =
@@ -43,7 +42,7 @@ function App() {
       document.body.style.background = night;
       document.body.style.backgroundAttachment = "fixed";
     }
-
+    
     return () => {
       clearInterval(timer);
     };
