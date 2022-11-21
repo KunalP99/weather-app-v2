@@ -18,6 +18,7 @@ export default function WeatherInformation() {
     await axios
       .get(url)
       .then((res) => {
+        console.log(res);
         setIsLoading(true);
         setLocation(res.data);
         setIsLoading(false);
@@ -66,7 +67,11 @@ export default function WeatherInformation() {
       {error && (
         <div className='error-code'>{error} - Try type another city name!</div>
       )}
-      <MoreWeatherInformation />
+      {!isLoading && (
+        <div>
+          <MoreWeatherInformation location={location} />
+        </div>
+      )}
     </main>
   );
 }
