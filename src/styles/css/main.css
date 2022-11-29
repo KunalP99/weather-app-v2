@@ -206,6 +206,9 @@ main form button {
 main form button .search-img {
   width: 30px;
 }
+main .error-code {
+  text-align: center;
+}
 
 @media (max-width: 663px) {
   main form .search-box-container {

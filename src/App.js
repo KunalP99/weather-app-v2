@@ -42,7 +42,7 @@ function App() {
       document.body.style.background = night;
       document.body.style.backgroundAttachment = "fixed";
     }
-    
+
     return () => {
       clearInterval(timer);
     };
